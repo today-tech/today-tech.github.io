@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="了解 TODAY Infrastructure：模块化 Java 应用框架。">
+  <title>TODAY Infrastructure — TODAY Tech</title>
+  <link rel="icon" href="../../logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <script src="../../assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="../../" aria-label="TODAY Tech 首页"><span class="wordmark-mark" aria-hidden="true">T</span><span><strong>TODAY</strong><small>TECH</small></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">打开导航</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="主导航">
+        <a href="../../#projects" aria-current="page">项目</a><a href="../../#tools">工具</a><a href="https://docs.today-tech.cn/today-infrastructure/" target="_blank" rel="noreferrer">文档<span class="external-mark" aria-hidden="true">↗</span></a><a href="https://github.com/today-tech" target="_blank" rel="noreferrer">GitHub<span class="external-mark" aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero section-rule">
+      <div class="container page-hero-inner">
+        <div>
+          <p class="breadcrumb"><a href="../../">TODAY TECH</a><span>/</span> PROJECTS</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span>OPEN SOURCE · MODULAR JAVA FRAMEWORK</p>
+          <h1>把基础设施<br><em>拆开来看。</em></h1>
+          <p class="page-lead">TODAY Infrastructure 是一套模块化 Java 应用框架。它把应用启动、依赖注入、Web MVC、Netty 和数据访问组织在可以阅读、组合和扩展的模块里。</p>
+          <div class="button-row"><a class="button button-primary" href="https://docs.today-tech.cn/today-infrastructure/" target="_blank" rel="noreferrer">阅读文档 <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="https://github.com/TAKETODAY/today-infrastructure" target="_blank" rel="noreferrer">查看源码 <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="page-hero-aside framework-mark"><img src="../../logo.svg" alt="TODAY Infrastructure 标识"><span>INFRA</span><strong>5</strong><small>模块化<br>应用基础设施</small></div>
+      </div>
+    </section>
+
+    <section class="content-section compact-section">
+      <div class="container two-column-intro">
+        <p class="section-index">01 <span>/</span> THE IDEA</p>
+        <div><h2>适合想知道<br>框架如何工作的人。</h2><p class="large-copy">它适合希望深入理解 IoC、AOP、Bean 生命周期、Web MVC 和 Netty 如何协作的 Java 开发者，也适合想研究一套轻量、可读、可修改的应用基础设施的小型项目或个人开发者。</p><p class="muted-copy">如果你的首要需求是成熟生态、广泛的第三方 Starter、商业支持或现成的企业级集成，Spring Boot 仍然是更稳妥的选择。TODAY Infrastructure 是独立的框架实践，不是 Spring Framework 或 Spring Boot 的二进制兼容替代品。</p></div>
+      </div>
+    </section>
+
+    <section class="capabilities-section section-rule">
+      <div class="container">
+        <div class="section-heading"><p class="section-index">02 <span>/</span> CAPABILITIES</p><div><h2>从应用入口<br>到请求响应。</h2><p class="heading-description">按需组合模块，逐层理解应用基础设施。</p></div></div>
+        <div class="capabilities-grid">
+          <article><span class="capability-number">01</span><h3>应用启动</h3><p><code>@InfraApplication</code>、<code>Application</code>、环境和应用生命周期。</p></article>
+          <article><span class="capability-number">02</span><h3>IoC 与 AOP</h3><p>Bean 定义、依赖注入、组件扫描、事件、代理和方法拦截。</p></article>
+          <article><span class="capability-number">03</span><h3>Web MVC</h3><p>请求映射、参数绑定、异常处理、响应写入与 WebSocket。</p></article>
+          <article><span class="capability-number">04</span><h3>HTTP 与数据</h3><p>Netty Web Server、HTTP 客户端、JDBC、事务和持久化。</p></article>
+          <article><span class="capability-number">05</span><h3>工程支持</h3><p>BOM、Starter、Gradle 插件、配置处理器和测试模块。</p></article>
+          <article><span class="capability-number">06</span><h3>可选模块</h3><p>从 <code>infra-starter-*</code> 入手，也可以直接使用更底层的 <code>infra-*</code> 模块。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quickstart-section">
+      <div class="container quickstart-grid">
+        <div><p class="section-index">03 <span>/</span> FIRST RUN</p><h2>从一个<br>接口开始。</h2><p class="heading-description">完整教程与 API 参考请进入文档站；下面只保留最短的阅读路径。</p></div>
+        <div class="code-card"><div class="code-card-head"><span>DemoApplication.java</span><span>JDK 17+</span></div><pre><code><span class="code-annotation">@InfraApplication</span>
+<span class="code-keyword">public class</span> DemoApplication {
+
+  <span class="code-keyword">public static void</span> main(String[] args) {
+    Application.run(DemoApplication.class, args);
+  }
+
+  <span class="code-annotation">@GET</span>(<span class="code-string">"/hello"</span>)
+  <span class="code-keyword">public</span> String hello() {
+    <span class="code-keyword">return</span> <span class="code-string">"Hello, TODAY!"</span>;
+  }
+}</code></pre><div class="code-card-foot">从应用入口到 <span class="mono">GET /hello</span></div></div>
+      </div>
+    </section>
+
+    <section class="details-section section-rule">
+      <div class="container details-grid">
+        <div><p class="section-index">04 <span>/</span> CURRENTLY</p><h2>现在就能<br>查到的事实。</h2></div>
+        <div class="details-list">
+          <div><span>运行环境</span><strong>Java 17+</strong><p>公开仓库 README 当前以 JDK 17+ 为目标环境。</p></div>
+          <div><span>公开坐标</span><strong><code>cn.taketoday</code></strong><p>当前公开示例使用该 Maven 坐标。未来命名空间与版本规划尚未作为稳定版发布。</p></div>
+          <div><span>开发状态</span><strong>5.0-Draft.10-SNAPSHOT</strong><p>当前源码仓库中的开发版本。请以源码仓库与文档站为准。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section"><div class="container cta-box"><div><p class="section-index">CONTINUE READING</p><h2>把更多时间<br>留给代码。</h2></div><a class="button button-primary" href="https://docs.today-tech.cn/today-infrastructure/" target="_blank" rel="noreferrer">进入完整文档 <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="wordmark wordmark-footer" href="../../"><span class="wordmark-mark" aria-hidden="true">T</span><span><strong>TODAY</strong><small>TECH</small></span></a><p>面向 Java 开发者的<br>开源框架与开发工具。</p></div><div class="footer-links"><div><span>组织</span><a href="https://github.com/today-tech" target="_blank" rel="noreferrer">GitHub ↗</a></div><div><span>项目</span><a href="https://github.com/TAKETODAY/today-infrastructure" target="_blank" rel="noreferrer">框架源码 ↗</a></div><div><span>文档</span><a href="https://docs.today-tech.cn/today-infrastructure/" target="_blank" rel="noreferrer">在线文档 ↗</a></div><div><span>工具</span><a href="../../products/today-infra-assistant/">插件详情 →</a></div></div></div><div class="container footer-bottom"><span>© <span data-current-year>2026</span> TODAY Tech</span><span class="mono">TODAY-TECH.CN / PROJECT 01</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TODAY Tech：面向 Java 开发者的开源框架与开发工具。">
+  <title>TODAY Tech — Java 开发者的框架与工具</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="./" aria-label="TODAY Tech 首页">
+        <span class="wordmark-mark" aria-hidden="true">T</span>
+        <span><strong>TODAY</strong><small>TECH</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">打开导航</span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="主导航">
+        <a href="#projects">项目</a>
+        <a href="#tools">工具</a>
+        <a href="https://docs.today-tech.cn/today-infrastructure/" target="_blank" rel="noreferrer">文档<span class="external-mark" aria-hidden="true">↗</span></a>
+        <a href="https://github.com/today-tech" target="_blank" rel="noreferrer">GitHub<span class="external-mark" aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-rule">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>OPEN SOURCE · JAVA · TOOLING</p>
+          <h1>把 Java 应用<br><em>做得更清楚。</em></h1>
+          <p class="hero-intro">TODAY Tech 是面向 Java 开发者的开源框架与开发工具，帮助你从应用启动、依赖注入到 Web 开发，理解并构建自己的基础设施。</p>
+          <div class="button-row">
+            <a class="button button-primary" href="https://docs.today-tech.cn/today-infrastructure/" target="_blank" rel="noreferrer">阅读框架文档 <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="https://github.com/today-tech" target="_blank" rel="noreferrer">查看 GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-note"><span class="mono">TODAY / 01</span> 先从框架开始，再选择工具。</p>
+        </div>
+        <div class="hero-diagram" aria-label="Java 应用通过 TODAY Infrastructure 连接开发工具的关系图" role="img">
+          <svg viewBox="0 0 620 530" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <pattern id="hero-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+                <path d="M 24 0 L 0 0 0 24" fill="none" stroke="currentColor" stroke-width="1" opacity=".08"/>
+              </pattern>
+              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="#ed5b37"/>
+              </marker>
+            </defs>
+            <rect width="620" height="530" rx="4" fill="url(#hero-grid)"/>
+            <path class="diagram-line" d="M167 161 H288" marker-end="url(#arrow)"/>
+            <path class="diagram-line" d="M438 161 H535 V354 H438" marker-end="url(#arrow)"/>
+            <path class="diagram-line diagram-line-muted" d="M363 210 V333" marker-end="url(#arrow)"/>
+            <g class="diagram-node diagram-node-app">
+              <rect x="34" y="116" width="134" height="90" rx="3"/>
+              <text x="52" y="145" class="node-kicker">01 / APPLICATION</text>
+              <text x="52" y="177" class="node-title">Java 应用</text>
+              <circle cx="145" cy="183" r="4"/>
+            </g>
+            <g class="diagram-node diagram-node-core">
+              <rect x="288" y="110" width="150" height="100" rx="3"/>
+              <text x="306" y="140" class="node-kicker">02 / FRAMEWORK</text>
+              <text x="306" y="174" class="node-title">TODAY</text>
+              <text x="306" y="193" class="node-title">Infrastructure</text>
+            </g>
+            <g class="diagram-node diagram-node-tool">
+              <rect x="438" y="333" width="148" height="91" rx="3"/>
+              <text x="456" y="362" class="node-kicker">03 / IDE TOOL</text>
+              <text x="456" y="394" class="node-title">Infra Assistant</text>
+              <circle cx="562" cy="401" r="4"/>
+            </g>
+            <g class="diagram-label">
+              <rect x="212" y="137" width="68" height="24" rx="12"/>
+              <text x="246" y="153" text-anchor="middle">运行时</text>
+            </g>
+            <g class="diagram-label diagram-label-light">
+              <rect x="382" y="252" width="66" height="24" rx="12"/>
+              <text x="415" y="268" text-anchor="middle">开发时</text>
+            </g>
+            <text x="34" y="472" class="diagram-caption">A SMALLER DISTANCE BETWEEN CODE AND IDE</text>
+            <path d="M34 454 H586" class="diagram-baseline"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-strip">
+      <div class="container intro-strip-inner">
+        <p class="section-index">00 <span>/</span> WHY TODAY</p>
+        <p class="intro-statement">从一套可读、可拆解的基础设施出发，<br>让框架不再只是黑盒。</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-index">01 <span>/</span> PROJECT</p>
+          <div>
+            <h2>核心项目</h2>
+            <p class="heading-description">先理解应用如何被组织，再决定哪些模块真正属于你的项目。</p>
+          </div>
+        </div>
+        <article class="feature-project">
+          <div class="feature-project-main">
+            <div class="project-identity"><img src="logo.svg" alt="TODAY Infrastructure 标识"><div class="project-badge">OPEN SOURCE <span>·</span> JAVA FRAMEWORK</div></div>
+            <h3>TODAY<br><span>Infrastructure</span></h3>
+            <p>一套模块化的 Java 应用框架，覆盖依赖注入、自动配置、Web MVC、Netty 与数据访问。模块可以按应用需要组合，也可以从更底层的基础设施开始探索。</p>
+            <a class="text-link" href="projects/today-infrastructure/">了解框架 <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="feature-project-aside">
+            <div class="aside-label">它提供什么</div>
+            <ul class="capability-list">
+              <li><span>01</span><strong>应用启动</strong><small>生命周期与自动配置</small></li>
+              <li><span>02</span><strong>IoC 容器</strong><small>Bean、依赖注入与事件</small></li>
+              <li><span>03</span><strong>Web MVC</strong><small>请求映射与响应处理</small></li>
+              <li><span>04</span><strong>工程支持</strong><small>Starter、BOM 与 Gradle</small></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section tool-section" id="tools">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-index">02 <span>/</span> TOOL</p>
+          <div>
+            <h2>开发工具</h2>
+            <p class="heading-description">把框架里的结构带进 IDE，让探索代码的路径更短。</p>
+          </div>
+        </div>
+        <article class="tool-feature">
+          <div class="tool-feature-copy">
+            <div class="project-badge">CLOSED SOURCE <span>·</span> INTELLIJ IDEA ULTIMATE</div>
+            <h3>TODAY Infra<br><span>Assistant</span></h3>
+            <p>面向 IntelliJ IDEA Ultimate 的可选插件，围绕 TODAY Infrastructure 提供 Bean 导航与检查、配置补全、Web MVC 导航，以及运行与调试辅助。</p>
+            <div class="button-row">
+              <a class="button button-primary" href="products/today-infra-assistant/">查看插件详情 <span aria-hidden="true">→</span></a>
+              <a class="button button-secondary" href="https://plugins.jetbrains.com/plugin/36523-today-infra-assistant" target="_blank" rel="noreferrer">安装入口 <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="tool-sketch" aria-hidden="true">
+            <div class="tool-sketch-top"><span>INFRA ASSISTANT</span><span>IDEA</span></div>
+            <div class="tool-sketch-body">
+              <div class="sketch-tree"><i></i><i></i><i class="active"></i><i></i><i></i></div>
+              <div class="sketch-editor"><span class="code-line long"></span><span class="code-line mid"></span><span class="code-line short accent"></span><span class="code-line long"></span><span class="code-line mid"></span><span class="code-line shorter"></span></div>
+              <div class="sketch-panel"><span class="panel-title">BEANS</span><span class="panel-item">ApplicationContext</span><span class="panel-item active-item">DemoController</span><span class="panel-item">DataSource</span></div>
+            </div>
+            <div class="tool-sketch-foot"><span>context ready</span><span>⌘ P</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="start-section">
+      <div class="container start-box">
+        <div>
+          <p class="section-index">03 <span>/</span> START HERE</p>
+          <h2>从第一个应用<br>开始。</h2>
+        </div>
+        <div class="start-copy">
+          <p>框架的完整技术细节、快速开始和 API 参考都在现有文档站。插件是可选工具，使用 TODAY Infrastructure 不需要安装它。</p>
+          <a class="text-link text-link-light" href="https://docs.today-tech.cn/today-infrastructure/" target="_blank" rel="noreferrer">打开文档站 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="wordmark wordmark-footer" href="./"><span class="wordmark-mark" aria-hidden="true">T</span><span><strong>TODAY</strong><small>TECH</small></span></a>
+        <p>面向 Java 开发者的<br>开源框架与开发工具。</p>
+      </div>
+      <div class="footer-links">
+        <div><span>组织</span><a href="https://github.com/today-tech" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        <div><span>项目</span><a href="https://github.com/TAKETODAY/today-infrastructure" target="_blank" rel="noreferrer">框架源码 ↗</a></div>
+        <div><span>文档</span><a href="https://docs.today-tech.cn/today-infrastructure/" target="_blank" rel="noreferrer">在线文档 ↗</a></div>
+        <div><span>工具</span><a href="https://plugins.jetbrains.com/plugin/36523-today-infra-assistant" target="_blank" rel="noreferrer">Marketplace ↗</a></div>
+      </div>
+    </div>
+    <div class="container footer-bottom"><span>© <span data-current-year>2026</span> TODAY Tech</span><span class="mono">TODAY-TECH.CN / BUILDING IN PUBLIC</span></div>
+  </footer>
+</body>
+</html>
