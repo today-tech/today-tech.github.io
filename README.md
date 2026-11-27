@@ -21,6 +21,9 @@ python3 -m http.server 8000
 ```text
 .
 ├── index.html
+├── robots.txt
+├── sitemap.xml
+├── logo.svg
 ├── assets/
 │   ├── css/site.css       # 全站设计与响应式样式
 │   └── js/site.js         # 移动端导航、页脚年份
@@ -29,6 +32,8 @@ python3 -m http.server 8000
 └── products/
     └── today-infra-assistant/index.html
 ```
+
+页面已包含 canonical、Open Graph 基础元信息和首页 Organization 结构化数据。`robots.txt` 与 `sitemap.xml` 使用正式域名 `today-tech.cn`；自定义域名启用后，可将 `https://today-tech.cn/sitemap.xml` 提交到 Google Search Console 等站长工具。
 
 ## 已核实的公开入口
 
